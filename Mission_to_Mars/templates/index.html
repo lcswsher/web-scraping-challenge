@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="display-3"><b>Mission to Mars</b></h1>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a>
+        </p>
+    </div>
+
+    <div class="container-fluid">
+        <h2><b>Latest Mars News</b></h2>
+        <h5>{{ mars_information.News_Title }}</h5>
+        <p>{{ mars_information.News_Article }}</p>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <h2><b>Featured Mars Image</b></h2>
+                <img src="{{ mars_information.Featured_Image }}" alt="Featured Mars Image"
+                    style="max-width:600px; max-height: 800px;">
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 27rem;">
+                    <div class="card-body">                        
+                    </div>
+                </div>
+                <br>
+                <h5>Mars Facts</h5>
+                <div>{{ mars_information.Facts_Table |safe }}</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid text-center">
+        <h2><b>Mars Hemispheres</b></h2>
+        <div class="row">
+            {% for img in mars_information.Hemisphere_Images %}
+            <div class="col-md-6">
+                <div class="card" style="size: 25rem;">
+                    <img src="{{ img.img_url }}" class="card-img-top" alt="{{ img.title }}">
+                    <div class="card-body">
+                        <p class="card-text"><b> {{ img.title }} </b></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    </div>
+
+</body>
+
+</html>
