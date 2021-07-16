@@ -55,8 +55,8 @@ featured_image_url = 'https://spaceimages-mars.com/image/featured/mars2.jpg'
 * Use Pandas to convert the data to a HTML table string.
 
 ### Mars Hemispheres
-
-* Visit the astrogeology site [here](https://marshemispheres.com/) to obtain high resolution images for each of Mar's hemispheres.
+https://marshemispheres.com/
+* Visit the astrogeology site [here]() to obtain high resolution images for each of Mar's hemispheres.
 
 * You will need to click each of the links to the hemispheres in order to find the image url to the full resolution image.
 
