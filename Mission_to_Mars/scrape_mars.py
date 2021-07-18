@@ -51,16 +51,11 @@ def scrape():
     news_p = soup.find_all('div', class_='article_teaser_body')[0].text
 
    
-    
-    
-
-
     # ------------------ JPL Mars Space Images - Featured Image ---
 
     # In[6]:
 
  
-
     # URL of page to be scraped
     url2 = 'https://spaceimages-mars.com/'
     browser.visit(url2)
