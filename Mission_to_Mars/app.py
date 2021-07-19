@@ -31,7 +31,7 @@ def scrape():
     
     # mars_data = scrape_mars.scrape_information()
     
-    mongo.db.mars_information.update_one({}, mars_information, upsert=True)
+    mongo.db.mars_information.update({}, mars_information, upsert=True)
     
     return redirect("/")
     # return render_template("index.html", text="Serving up cool text from the Flask server!!")
