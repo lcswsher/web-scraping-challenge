@@ -21,7 +21,7 @@
     <div class="container-fluid">
         <h2><b>Latest Mars News</b></h2>
         <h5><b>{{ mars_information.News_Title }}</b></h5>
-        <p><b>{{ mars_information.News_Article }}</b></p>
+        <h5><p><b>{{ mars_information.News_Article }}</b></p></h5>
     </div>
 
     <div class="container-fluid">
@@ -29,27 +29,32 @@
             <div class="col-md-6">
                 <h2><b>Featured Mars Image</b></h2>
                 <img src="{{ mars_information.Featured_Image }}" alt="Featured Mars Image"
-                    style="max-width:600px; max-height: 800px;">
+                    style="max-width:900px; max-height: 800px;">
             </div>
             <div class="col-md-6">
-                <div class="card" style="width: 27rem;">
+                <div class="card" style="width: 25rem;">
                     <div class="card-body"></div>
                 </div>
                 <h2><b>Mars Facts</b></h2>
-                <div>{{ mars_information.Facts_Table|safe }}</div>
+                <div><h3><b>{{ mars_information.Facts_Table|safe }}</b></h3></div>                   
             </div>
         </div>
     </div>
     
     <div class="container-fluid text-center">
-        <h2><b>Mars Hemispheres</b></h2>
+        <br>
+        <br>
+        <h2><b>Mars Hemispheres enhanced images of Cerberus, Schiaparelli, Syrtis Major and Valles Marineris</b></h2>
+        <br>
         <div class="row">
             {% for img in mars_information.Hemisphere_Images %}
-            <div class="col-md-12">
+            <div class="col-md-6 border">
                 <div class="card" style="size: 10rem;">
-                    <img src="{{ img.img_url }}" class="card-img-top" alt="{{ img.title }}">
+                    <img width="800 px" height="800 px" src="{{ img.img_url }}" class="card-img-top" alt="{{ img.title }}">
                     <div class="card-body">
                         <p class="card-text"><b> {{ img.title }} </b></p>
+                    <br>
+                    <br>
                     </div>
                 </div>
             </div>
