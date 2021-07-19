@@ -2,7 +2,9 @@
 
 
 
-### This assignment uses Jupyter Notebook, Beautiful Soup, Panda and Splinter and scrapes the following sites :  NASA MARS News,  Mars Featured Space Image,  Mars Facts table and images of MARS. 
+### This assignment uses Jupyter Notebook, Beautiful Soup, Panda and Splinter and scrapes the following sites :  NASA MARS News,  Mars Featured Space Image,  Mars Facts table and images of MARS.   The data is extracted from the web sites and populated into a Mongo DB and subsequently mapped to an Html file  (index). 
+
+
 
 #### Data folder "Mission to Mars"  -  https://github.com/lcswsher/web-scraping-challenge/tree/main/Mission_to_Mars
 
