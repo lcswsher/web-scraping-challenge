@@ -55,7 +55,7 @@ def scrape():
 
     # In[6]:
 
- 
+    
     # URL of page to be scraped
     url2 = 'https://spaceimages-mars.com/'
     browser.visit(url2)
@@ -82,7 +82,7 @@ def scrape():
 
     # In[9]:
 
-
+    
     # We can use the read_html function in Pandas to automatically scrape any tabular data from a page.
     url3 = 'https://galaxyfacts-mars.com'
     tables = pd.read_html(url3)
